@@ -3,8 +3,8 @@
 <p align="center">
     🤗 <a href="https://huggingface.co/datasets/HIT-TMG/YiZhao">Hugging Face</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
     🤖 <a href="https://modelscope.cn/datasets/CMB_AILab/YiZhao-FinDataSet">ModelScope</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-    🪄 <a href="https://modelscope.cn/models/CMB_AILab/YiZhao-12B-Chat-HF">Model</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-    📑 <a href="https://github.com/HITsz-TMG/YiZhao/raw/main/YiZhao_technical_report.pdf">Technical Report</a>
+    🪄 <a href="https://modelscope.cn/models/CMB_AILab/YiZhao-12B-Chat-HF">YiZhao-12B-Chat</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+    📑 <a href="https://github.com/HITsz-TMG/YiZhao/blob/main/YiZhao_technical_report.pdf">Technical Report</a>
 </p>
 
 Data and tools for generating and inspecting **YiZhao**, a safe, high-quality, open-sourced bilingual financial corpus (Chinese, English) released by Harbin Institute of Technology (Shenzhen) and China Merchants Bank Artificial Intelligence Laboratory.
@@ -58,7 +58,7 @@ python 3_rule_filter.py \
 ```
 
 ### 4. Perplexity Filtering
-You need to first download the model from the [(address)](https://huggingface.co/edugp/kenlm), and then modify the corresponding model path in the following line in `4_perplexity_filter/kenlm/run.py`.
+You need to first download the model from the [KenLM repository](https://huggingface.co/edugp/kenlm), and then modify the corresponding model path in the following line in `4_perplexity_filter/kenlm/run.py`.
 ```python
 model = KenlmModel.from_pretrained("kenlm/wikipedia", args.language) #language = zh or en
 ```
